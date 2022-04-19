@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	id="WebApp_ID" version="2.5">
+	<display-name>CustomersApp</display-name>
+	<welcome-file-list>
+		<welcome-file>JSPPages/Welcome.jsp</welcome-file>
+	</welcome-file-list>
+	<servlet>
+		<description></description>
+		<display-name>AddCustomerServlet</display-name>
+		<servlet-name>AddCustomerServlet</servlet-name>
+		<servlet-class>com.mycompany.ui.AddCustomerServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>AddCustomerServlet</servlet-name>
+		<url-pattern>/addCustomer</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>GetAllCustomersServlet</display-name>
+		<servlet-name>GetAllCustomersServlet</servlet-name>
+		<servlet-class>com.mycompany.ui.GetAllCustomersServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetAllCustomersServlet</servlet-name>
+		<url-pattern>/getAllCustomers</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<description></description>
+		<display-name>GotoWebSiteServlet</display-name>
+		<servlet-name>GotoWebSiteServlet</servlet-name>
+		<servlet-class>com.mycompany.ui.GotoWebSiteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GotoWebSiteServlet</servlet-name>
+		<url-pattern>/gotoWebsite</url-pattern>
+	</servlet-mapping>
+	
+	<session-config>
+	     <session-timeout>20</session-timeout>
+	</session-config>
+	
+	
+	<context-param>
+		<param-name>url</param-name>
+		<param-value>jdbc:mysql://localhost:3306/training</param-value>
+	</context-param>
+	
+	
+</web-app>
